@@ -28,7 +28,8 @@ public class Kasutajanimi implements Genereerija {
         return kasutajanimi;
     }
 
-    public String getKasutajanimi() {
+    @Override
+    public String toString() {
         return kasutajanimi;
     }
 }

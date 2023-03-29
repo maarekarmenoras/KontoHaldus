@@ -8,7 +8,11 @@ public class Peaklass {
         Kasutajanimi kasutajanimi;
         Salasõna salasõna;
         String portaal;
+        Kasutaja kasutaja;
         BufferedReader kasutajaSisendiLugeja = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Sisestage kasutatav portaal ");
+        portaal = kasutajaSisendiLugeja.readLine();
 
         System.out.print("Sisestage kasutajanimi (tühja sisendi puhul genereeritakse automaatselt): ");
         kasutajaSisend = kasutajaSisendiLugeja.readLine();
@@ -17,19 +21,19 @@ public class Peaklass {
         } else {
             kasutajanimi = new Kasutajanimi();
         }
+
         System.out.print("Sisestage salasõna (tühja sisendi pihul genereeritakse automaatselt: )");
         kasutajaSisend = kasutajaSisendiLugeja.readLine();
         if (kasutajaSisend != null) {
             salasõna = new Salasõna(kasutajaSisend);
+            kasutaja = new Kasutaja(kasutajanimi, salasõna, portaal);
+            kasutaja.kontrolliSalasõnaTugevust();
         } else {
             salasõna = new Salasõna();
+            kasutaja = new Kasutaja(kasutajanimi, salasõna, portaal);
         }
-        System.out.println("Sisestage kasutatav portaal ");
-        portaal = kasutajaSisendiLugeja.readLine();
-        kasutajaSisendiLugeja.close();
 
-        salasõna.kontrolli();
-        Kasutaja kasutaja = new Kasutaja(kasutajanimi, salasõna, portaal);
+        kasutajaSisendiLugeja.close();
         kasutaja.KirjutaFaili();
     }
 }
