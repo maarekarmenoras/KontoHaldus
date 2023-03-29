@@ -4,10 +4,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Kasutajanimi extends Genereerija{
-    String kasutajanimi;
+public class Kasutajanimi implements Genereerija {
+    private String kasutajanimi;
 
     public Kasutajanimi(String kasutajanimi) {
+
         this.kasutajanimi = kasutajanimi;
     }
     public Kasutajanimi() throws IOException {
@@ -28,18 +29,7 @@ public class Kasutajanimi extends Genereerija{
         return kasutajanimi;
     }
 
-    @Override
-    public void loeFailist() {
-
-    }
-
-    @Override
-    public void kirjutaFaili() {
-
-    }
-
-    @Override
-    public void tühjendaFail() {
-
+    public String getKasutajanimi() {
+        return kasutajanimi;
     }
 }

@@ -1,24 +1,16 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Kasutaja {
-    Kasutajanimi kasutajanimi;
-    Salasõna salasõna;
-    String portaal;
-    List<Kasutaja> kasutajaList = new ArrayList<>();
+    private Kasutajanimi kasutajanimi;
+    private Salasõna salasõna;
+    private String portaal;
+
     public Kasutaja(Kasutajanimi kasutajanimi, Salasõna salasõna, String portaal) {
         this.kasutajanimi = kasutajanimi;
         this.salasõna = salasõna;
-        this.portaal = portaal; //kontrollib kasutajanime ja parooli, väljastab hoiatuse
+        this.portaal = portaal;
     }
-    public void talletaKasutaja(Kasutaja kasutaja) {
-        kasutajaList.add(kasutaja);
-        System.out.println("Kasutaja lisatud.");
-    }
-    public void väljastaKasutajad() {
-        for (Kasutaja kasutaja : kasutajaList) {
-            System.out.println(kasutaja.toString());
-        }
+
+    public void KirjutaFaili() {
+
     }
 
     @Override

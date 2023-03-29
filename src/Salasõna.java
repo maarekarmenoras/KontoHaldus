@@ -1,14 +1,14 @@
-public class Salasõna extends Genereerija{
-    String salasõna;
+public class Salasõna implements Genereerija {
+    private String salasõna;
 
     public Salasõna(String salasõna) {
         this.salasõna = salasõna;
     }
     public Salasõna() {
-        this.salasõna = genereeri(); //loob kuidagi midagi
+        this.salasõna = genereeri();
     }
 
-    public void kontrolli(Salasõna salasõna) {
+    public void kontrolli() {
         //teeb oma kontrollimise maagiat, vb tarvilik integreerida genereerija klassi
         //arvutab parooli tugevust
         //väljastab nõuandeid
@@ -20,20 +20,7 @@ public class Salasõna extends Genereerija{
         return null;
     }
 
-    @Override
-    public void loeFailist() {
-
+    public String getSalasõna() {
+        return salasõna;
     }
-
-    @Override
-    public void kirjutaFaili() {
-
-    }
-
-    @Override
-    public void tühjendaFail() {
-
-    }
-    //aga mida see juurde annab et need asjad kõik eraldi klassis on
-
 }
