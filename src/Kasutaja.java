@@ -9,7 +9,7 @@ public class Kasutaja {
     public Kasutaja(Kasutajanimi kasutajanimi, Salasõna salasõna, String portaal) {
         this.kasutajanimi = kasutajanimi;
         this.salasõna = salasõna;
-        this.portaal = portaal;
+        this.portaal = portaal; //kontrollib kasutajanime ja parooli, väljastab hoiatuse
     }
     public void talletaKasutaja(Kasutaja kasutaja) {
         kasutajaList.add(kasutaja);
