@@ -8,7 +8,6 @@ public class Kasutajanimi implements Genereerija {
     private String kasutajanimi;
 
     public Kasutajanimi(String kasutajanimi) {
-
         this.kasutajanimi = kasutajanimi;
     }
     public Kasutajanimi() throws IOException {
@@ -18,7 +17,7 @@ public class Kasutajanimi implements Genereerija {
 
     @Override
     public String genereeri() throws IOException {
-        // Kasutame nimede genereerimiseks randommer.io APId.
+        // Kasutame nimede genereerimiseks randommer.io APId
         URL url = new URL("https://randommer.io/api/Name?nameType=firstname&quantity=1");
         HttpURLConnection ühendus = (HttpURLConnection) url.openConnection(); // Loome ühenduse
         ühendus.setRequestMethod("GET");
