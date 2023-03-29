@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public abstract class Genereerija {
-    public String genereeri() {return null;}
-    public void loeFailist() {}
-    public void kirjutaFaili() {}
-    public void tühjendaFail() {}
+    public abstract String genereeri() throws IOException;
+    public abstract void loeFailist();
+    public abstract void kirjutaFaili();
+    public abstract void tühjendaFail();
 }
