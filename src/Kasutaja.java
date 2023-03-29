@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class Kasutaja {
@@ -56,8 +53,18 @@ public class Kasutaja {
         // TODO: Anda kasutajale mõistetavamat tagasisidet salasõna tugevuse kohta.
     }
 
-    public void KirjutaFaili() {
-
+    public void KirjutaFaili() throws IOException {
+        File fail = new File("kasutajad.txt");
+        BufferedWriter kirjutaja = new BufferedWriter(new FileWriter(fail, true));
+        kirjutaja.write("================");
+        kirjutaja.newLine();
+        kirjutaja.write(portaal);
+        kirjutaja.newLine();
+        kirjutaja.write(kasutajanimi.toString());
+        kirjutaja.newLine();
+        kirjutaja.write(salasõna.toString());
+        kirjutaja.newLine();
+        kirjutaja.close();
     }
 
     @Override

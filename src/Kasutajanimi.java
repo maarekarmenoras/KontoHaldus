@@ -25,7 +25,7 @@ public class Kasutajanimi implements Genereerija {
         BufferedReader in = new BufferedReader(new InputStreamReader(ühendus.getInputStream()));
         String kasutajanimi = in.readLine(); // Loeme vastuse
         in.close();
-        return kasutajanimi;
+        return kasutajanimi.substring(2, kasutajanimi.length() - 2);
     }
 
     @Override
