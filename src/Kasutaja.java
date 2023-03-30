@@ -16,6 +16,10 @@ public class Kasutaja {
         this.portaal = portaal;
     }
 
+    /**
+     * Kontrollib salasõna tugevust eri parameetrite põhjal.
+     * @throws IOException
+     */
     public void kontrolliSalasõnaTugevust() throws IOException {
         // Kontrollime ega salasõna pole 100000 enim kasutatud salasõna seas.
         String[] kõigeKasutatavamadSalasõnad = new String[100000];
@@ -53,6 +57,10 @@ public class Kasutaja {
         // TODO: Anda kasutajale mõistetavamat tagasisidet salasõna tugevuse kohta.
     }
 
+    /**
+     * Kirjutab informatsiooni kasutaja kohta faili kasutajad.txt
+     * @throws IOException
+     */
     public void KirjutaFaili() throws IOException {
         File fail = new File("kasutajad.txt");
         BufferedWriter kirjutaja = new BufferedWriter(new FileWriter(fail, true));

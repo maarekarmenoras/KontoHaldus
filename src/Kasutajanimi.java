@@ -14,7 +14,11 @@ public class Kasutajanimi implements Genereerija {
         this.kasutajanimi = genereeri();
     }
 
-
+    /**
+     * Kasutajanime genereerimine etteantud nimekirja sõnade põhjal.
+     * @return kasutajanimi sõne kujul.
+     * @throws IOException
+     */
     @Override
     public String genereeri() throws IOException {
         // Kasutame nimede genereerimiseks randommer.io APId

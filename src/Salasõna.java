@@ -16,6 +16,10 @@ public class Salasõna implements Genereerija {
         this.salasõna = genereeri();
     }
 
+    /**
+     * Salasõna genereerimine suvalistest sümbolitest.
+     * @return salasõna sõne kujul.
+     */
     @Override
     public String genereeri() {
         StringBuilder salasõna = new StringBuilder();
@@ -29,7 +33,6 @@ public class Salasõna implements Genereerija {
 
         // TODO: muuda generatsiooni nii, et salasõnas oleks alati vähemalt 3 liiget igast kategooriast.
     }
-
     @Override
     public String toString() {
         return salasõna;
