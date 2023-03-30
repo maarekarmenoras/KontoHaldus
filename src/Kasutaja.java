@@ -64,8 +64,10 @@ public class Kasutaja {
     public void KirjutaFaili() throws IOException {
         File fail = new File("kasutajad.txt");
         BufferedWriter kirjutaja = new BufferedWriter(new FileWriter(fail, true));
-        kirjutaja.write("================");
-        kirjutaja.newLine();
+        if (fail.length() != 0) { //ei lisa rida, kui faili lisatakse kõige esimene kasutaja
+            kirjutaja.write("================");
+            kirjutaja.newLine();
+        } else {}
         kirjutaja.write(portaal);
         kirjutaja.newLine();
         kirjutaja.write(kasutajanimi.toString());
@@ -77,8 +79,8 @@ public class Kasutaja {
 
     @Override
     public String toString() {
-        return "Kasutaja kohas " + portaal + ": \n" +
-                "kasutajanimi = " + kasutajanimi.toString() +
+        return "portaal =  " + portaal +
+                ", kasutajanimi = " + kasutajanimi.toString() +
                 ", salasõna = " + salasõna.toString();
     }
 }

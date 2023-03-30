@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="078c959e-d8b3-489d-9684-b09b887de1e0" name="Changes" comment="Salasõna tugevuse kontroll">
+    <list default="true" id="078c959e-d8b3-489d-9684-b09b887de1e0" name="Changes" comment="dokumentatsioon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kasutajad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kasutajad.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kasutaja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasutaja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kasutajanimi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kasutajanimi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Salasõna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Salasõna.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680131759454</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="dokumentatsioon">
+      <created>1680173928579</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680173928579</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +155,8 @@
     <MESSAGE value="Peaklass &amp; projekti struktuuri koristus" />
     <MESSAGE value="Salasõna genereerimine" />
     <MESSAGE value="Salasõna tugevuse kontroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Salasõna tugevuse kontroll" />
+    <MESSAGE value="dokumentatsioon" />
+    <option name="LAST_COMMIT_MESSAGE" value="dokumentatsioon" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
