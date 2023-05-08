@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078c959e-d8b3-489d-9684-b09b887de1e0" name="Changes" comment="dokumentatsioon">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/GraafikaPeaklass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/resources/com/ui/graafika/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/UusKontoSündmus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/VaataKontosidSündmus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kasutajad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/kasutajad.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/GraafikaPeaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graafika/src/main/java/com/ui/graafika/GraafikaPeaklass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
