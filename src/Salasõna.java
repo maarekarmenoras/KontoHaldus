@@ -1,3 +1,5 @@
+package com.ui.graafika;
+
 import java.security.SecureRandom;
 import java.util.Random;
 

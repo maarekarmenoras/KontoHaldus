@@ -1,3 +1,4 @@
+package com.ui.graafika;
 import java.io.*;
 import java.util.Arrays;
 
@@ -10,7 +11,7 @@ public class Kasutaja {
     private static final String numbrid = "1234567890";
     private static final String muudSümbolid = "!@#$%^&*()_+-=[]{}|;':\\\"<>,.?/";
 
-    public Kasutaja(Kasutajanimi kasutajanimi, Salasõna salasõna, String portaal) {
+    public Kasutaja(String portaal, Kasutajanimi kasutajanimi, Salasõna salasõna) {
         this.kasutajanimi = kasutajanimi;
         this.salasõna = salasõna;
         this.portaal = portaal;

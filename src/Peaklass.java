@@ -38,11 +38,11 @@ public class Peaklass {
                 kasutajaSisend = kasutajaSisendiLugeja.readLine();
                 if (!Objects.equals(kasutajaSisend, "")) {
                     salasõna = new Salasõna(kasutajaSisend);
-                    kasutaja = new Kasutaja(kasutajanimi, salasõna, portaal);
+                    kasutaja = new Kasutaja(portaal, kasutajanimi, salasõna);
                     kasutaja.kontrolliSalasõnaTugevust();
                 } else {
                     salasõna = new Salasõna();
-                    kasutaja = new Kasutaja(kasutajanimi, salasõna, portaal);
+                    kasutaja = new Kasutaja(portaal, kasutajanimi, salasõna);
                 } //TODO: lisa võimalus halva salasõna korral kas uus salasõna sisestada või genereerida.
                 kasutaja.KirjutaFaili();
                 System.out.println("Lisatud uus kasutaja: \n" + kasutaja.toString());
