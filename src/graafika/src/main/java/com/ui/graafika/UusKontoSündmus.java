@@ -11,10 +11,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -165,6 +162,16 @@ public class UusKontoSündmus implements EventHandler {
         teavitus.showAndWait();
     }
     public static void salvestaKonto(String portaal, String kasutajanimi, String salasõna) {
+        try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("kasutajad.txt", true), "utf-8") )) {
+            bw.write(portaal);
+            bw.newLine();
+            bw.write(kasutajanimi);
+            bw.newLine();
+            bw.write(salasõna);
+            bw.newLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         näitaTeavitust("Konto lisatud.", "Teie konto on lisatud salvestatud kontode nimekirja ja on nähtaval salvestatud kontode tabelis.");
     }
 }
