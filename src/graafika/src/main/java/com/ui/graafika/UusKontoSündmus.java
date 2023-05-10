@@ -106,7 +106,7 @@ public class UusKontoSündmus implements EventHandler {
         ruudustik.add(lisaUusKonto, 0, 4);
 
         //lava
-        //TODO: tee nii et see uus stseen millegipärast paremale ei nihkuks
+        //TODO: tee nii aken korda, et ta avamisel sisu paremale ei nihutaks
         pealava.setScene(uusKontoStseen);
         pealava.show();
     }

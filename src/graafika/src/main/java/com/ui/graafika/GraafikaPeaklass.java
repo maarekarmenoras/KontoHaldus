@@ -56,6 +56,8 @@ public class GraafikaPeaklass extends Application {
 
         lahku.setOnAction(e -> Platform.exit());
 
+        //TODO: lisa võimalus salvestatud kontosid muuta
+
         //tutvustav tekst
         Text tekst = new Text("See on kasutajakontode haldamise programm.");
         tekst.setTextAlignment(TextAlignment.CENTER);
