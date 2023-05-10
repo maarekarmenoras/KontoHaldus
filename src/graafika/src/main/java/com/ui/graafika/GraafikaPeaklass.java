@@ -8,6 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 public class GraafikaPeaklass extends Application {
@@ -20,9 +23,10 @@ public class GraafikaPeaklass extends Application {
     public void start(Stage pealava) throws Exception {
 
         //üldine kujundus
-        StackPane juur = new StackPane();
+        VBox juur = new VBox();
         BorderPane menüü = new BorderPane();
-        Scene algStseen = new Scene(menüü, Color.WHITE);
+        juur.getChildren().add(menüü);
+        Scene algStseen = new Scene(juur, Color.WHITE);
 
         pealava.setWidth(500); //suvalised arvud, tarvilik hiljem muuta
         pealava.setHeight(300);
@@ -52,6 +56,12 @@ public class GraafikaPeaklass extends Application {
 
         lahku.setOnAction(e -> Platform.exit());
 
+        //tutvustav tekst
+        Text tekst = new Text("See on kasutajakontode haldamise programm.");
+        tekst.setTextAlignment(TextAlignment.CENTER);
+        juur.getChildren().add(tekst);
+
+        //lava
         pealava.setScene(algStseen);
         pealava.show();
     }
