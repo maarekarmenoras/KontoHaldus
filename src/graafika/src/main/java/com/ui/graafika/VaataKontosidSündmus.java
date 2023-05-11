@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -64,6 +63,7 @@ public class VaataKontosidSündmus implements EventHandler {
         TableColumn<String[], String> salasõna = new TableColumn<>("Salasõna");
         salasõna.setCellValueFactory(rida -> new SimpleStringProperty(rida.getValue()[2]));
 
+        //kontode failist lugemine
         try {
             andmed = loeKontod();
             tabel.setItems(andmed);
@@ -73,6 +73,7 @@ public class VaataKontosidSündmus implements EventHandler {
 
         tabel.getColumns().addAll(portaal, kasutajanimi, salasõna);
 
+        //tühja faili korral näitab tühja tabeli asemel kirja
         if (tabel.getItems().isEmpty()) {
             Text sõnum = new Text("See programm ei ole veel ühegi konto infot salvestanud või on kõigi talletatud kontode info ära kustatud. Uue konto lisamiseks vajuta nupul 'Lisa konto'.");
             sõnum.setWrappingWidth(pealava.getWidth()-40);

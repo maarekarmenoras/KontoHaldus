@@ -4,10 +4,12 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -56,12 +58,9 @@ public class UusKontoSündmus implements EventHandler {
 
         //uue konto lisamine
         lisaUusKonto.setOnAction(e -> {
-            String portaalSisend = portaal.getText();
-            String kasutajanimiSisend = kasutajanimi.getText();
-            String salasõnaSisend = salasõna.getText();
 
             try {
-                kontrolliSalasõnaTugevust(salasõnaSisend);
+                kontrolliSalasõnaTugevust(salasõna.getText());
                 salvestaKonto(portaal.getText(), kasutajanimi.getText(), salasõna.getText());
             } catch (NõrkSalasõnaErind ne) {
                 if (näitaHoiatust(ne.getMessage() + " Kas te soovite jätkata?")) {
@@ -72,6 +71,7 @@ public class UusKontoSündmus implements EventHandler {
             }
         });
 
+        //kasutajanime genereerimine
         genereeriKasutajanimi.setOnAction(e -> {
             try {
                 String genereeritudKasutajanimi = genereerija.genereeriKasutajanimi();
@@ -81,6 +81,7 @@ public class UusKontoSündmus implements EventHandler {
             }
         });
 
+        //salasõna genereerimine
         genereeriSalasõna.setOnAction(e -> {
             try {
                 String genereeritudSalasõna = genereerija.genereeriSalasõna();
@@ -90,6 +91,7 @@ public class UusKontoSündmus implements EventHandler {
             }
         });
 
+        //konto lisamise väljad
         ruudustik.add(new Label("Lisa uus konto"), 0, 0);
 
         ruudustik.add(new Label("Portaal:"), 0, 1);
@@ -130,6 +132,8 @@ public class UusKontoSündmus implements EventHandler {
             throw new NõrkSalasõnaErind("Teie salasõna on üks kõige enim kasutatud salasõnadest. Soovitame tugevalt seda muuta.");
         }
     }
+
+    //nõrga salasõna esitamise korral näidatav hoiatus
     public static boolean näitaHoiatust(String sõnum) {
         Alert hoiatus = new Alert(Alert.AlertType.WARNING);
         hoiatus.setHeaderText("Hoiatus");
@@ -142,7 +146,6 @@ public class UusKontoSündmus implements EventHandler {
         hoiatus.getButtonTypes().setAll(jah, ei);
 
         Optional<ButtonType> tulemus = hoiatus.showAndWait();
-        hoiatus.hide();
         if (tulemus.get() == jah) {
             return true;
         } else {
@@ -150,6 +153,7 @@ public class UusKontoSündmus implements EventHandler {
         }
     }
 
+    //konto eduka lisamise teavitus
     public static void näitaTeavitust(String pealkiri, String sõnum) {
         Alert teavitus = new Alert(Alert.AlertType.CONFIRMATION);
         teavitus.setHeaderText(pealkiri);
@@ -161,6 +165,8 @@ public class UusKontoSündmus implements EventHandler {
         teavitus.getButtonTypes().setAll(ok);
         teavitus.showAndWait();
     }
+
+    //lisatava konto kirjutamine faili
     public static void salvestaKonto(String portaal, String kasutajanimi, String salasõna) {
         try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("kasutajad.txt", true), "utf-8") )) {
             bw.write(portaal);
